@@ -1,0 +1,38 @@
+<div class="event-list">
+    <div class="container">
+        <div class="event-list-wrapper py-100 position-relative">
+            <div class="row">
+                <div class="col-12">
+                    <div class="background-title text-style-none">
+                        <h2>Event</h2>
+                    </div>
+                    <div class="section-head">
+                        <h5>
+                            Event
+                        </h5>
+                        <h3>
+                            Popular Event
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-lg-4 col-md-6 col-12 mt-4" *ngFor="let eventList of events">
+                    <div class="event-box">
+                        <img src="{{ eventList.image }}" alt="{{ eventList.eventName }}" class="img-fluid">
+                        <div class="event-content">
+                            <h5>
+                                {{ eventList.eventName }}
+                            </h5>
+                            <h6>
+                                CK Event Management
+                            </h6>
+                        </div>
+                        <i class="fa-solid fa-eye see-more"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

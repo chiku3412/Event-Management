@@ -1,0 +1,168 @@
+@import '../../../../assets/scss/color.scss';
+
+.footer-section {
+    background-color: #2d373c;
+    .footer-wrapper {
+        position: relative;
+        padding: 85px 0;
+        .footer-watermark {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            h1 {
+                font-weight: 900;
+                font-size: 60px;
+                text-transform: uppercase;
+                -webkit-text-fill-color: transparent;
+                line-height: .9;
+                -webkit-text-stroke: 1px #353f44;
+                word-break: break-all;
+                @media screen and (max-width: 567px) {
+                    font-size: 24px;
+                }
+                @media (min-width: 567px) and (max-width: 991px) {
+                    font-size: 42px;
+                }
+            }
+        }
+        .footer-widget {
+            .footer-widget-title {
+                font-weight: 600;
+                font-size: 25px;
+                color: $ck-white;
+                padding-bottom: 13px
+            }
+            .footer-link {
+                .link-list {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    li {
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            top: 50%;
+                            left: 3px;
+                            height: 100%;
+                            width: 2px;
+                            background: $ck-white;
+                        }
+                        &:last-child {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                        .footer-link, .footer-contact {
+                            display: inline-block;
+                            font-weight: 500;
+                            color: $ck-white;
+                            padding-left: 18px;
+                            padding: 5px 0 5px 20px;
+                            position: relative;
+                            transition: all 0.5s;
+                            text-decoration: none;
+                            cursor: pointer;
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 0;
+                                height: 8px;
+                                width: 8px;
+                                border-radius: 50%;
+                                background: $ck-white;
+                                transition: all 0.5s;
+                            }
+                            &:hover {
+                                color: $ck-main-color;
+                                transition: all 0.5s;
+                                &::after {
+                                    background: $ck-main-color;
+                                    transition: all 0.5s;
+                                }
+                            }
+                        }
+                    }
+                    .contact-icon {
+                        margin-right: 10px;
+                        color: $ck-white;
+                        font-size: 25px;
+                    }
+                    .contact-link {
+                        display: block;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 26px;
+                        color: $ck-white;
+                        cursor: pointer;
+                        a {
+                            transition: all 0.5s;
+                            &:hover {
+                                color: $ck-main-color;
+                                transition: all 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-newsletter-wrapper {
+            max-width: 470px;
+            h3 {
+                margin: 0;
+                font-weight: 700;
+                font-size: 30px;
+                color: $ck-white;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            h5 {
+                margin: 0;
+                color: $ck-main-color;
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                padding-top: 12px;
+            }
+        }
+    }
+    .footer-bottom {
+        padding: 48px 0;
+        border-top: 1px solid rgba(255,255,255,.5);
+        .footer-copyright, .footer-logo, .footer-social-links {
+            padding: 12px 0;
+            list-style: none;
+            p {
+                margin: 0;
+                font-size: 15px;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+                color: $ck-white;
+                a {
+                    color: $ck-white;
+                }
+            }
+            li {
+                margin-right: 25px;
+                text-decoration: none;
+                a {
+                    color: rgba(255,255,255,.4);
+                    font-size: 22px;
+                    cursor: pointer;
+                }
+            }
+            h2 {
+                color: $ck-white;
+                font-family: "Chivo", sans-serif;
+                margin: 0;
+                span {
+                    font-weight: 900;
+                }
+                font-weight: 600;
+            }
+        }
+    }
+}
