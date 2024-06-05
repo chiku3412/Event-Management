@@ -1,1 +1,43 @@
-<p>login works!</p>
+<div class="login-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-wrapper">
+                    <div class="logo text-center">
+                        <h2>
+                            <span>CK</span>
+                            Event Management
+                        </h2>
+                    </div>
+                    <h5 class="text-center my-4">Login</h5>
+                    <form [formGroup]="loginForm" class="text-center" (ngSubmit)="onLogin()">
+                        <p-inputGroup>
+                            <p-inputGroupAddon>
+                                <i class="pi pi-user"></i>
+                            </p-inputGroupAddon>
+                            <input pInputText placeholder="Username" formControlName="userName" />
+                        </p-inputGroup>
+                        <p-inputGroup class="my-4">
+                            <p-inputGroupAddon>
+                                <i class="pi pi-lock"></i>
+                            </p-inputGroupAddon>
+                            <input pInputText placeholder="Username" formControlName="password" />
+                        </p-inputGroup>
+                        <div class="mb-3 text-start">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                                <a class="float-end forget-password">Forget Password</a>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn ck-btn-solid w-50 justify-content-center m-auto mb-3">Login</button>
+                    </form>
+                    <!-- <p class="text-center register-text mt-3">
+                        Don't have an account? <a>Register here</a>
+                    </p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p-toast />

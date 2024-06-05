@@ -9,14 +9,16 @@ import { AboutComponent } from './layouts/user-layout/about/about.component';
 import { ContactComponent } from './layouts/user-layout/contact/contact.component';
 import { GalleryComponent } from './layouts/user-layout/gallery/gallery.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { AddEventComponent } from './admin-dashboard/add-event/add-event.component';
-import { MainDashboardComponent } from './admin-dashboard/main-dashboard/main-dashboard.component';
+import { MainDashboardComponent } from './layouts/admin-layout/main-dashboard/main-dashboard.component';
+import { AddEventComponent } from './layouts/admin-layout/add-event/add-event.component';
+import { ContactListComponent } from './layouts/admin-layout/contact-list/contact-list.component';
 
 const routes: Routes = [
   {
     path: '',
     component: UserLayoutComponent,
     children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'event-list', component: EventListComponent },
@@ -30,11 +32,14 @@ const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
-      { path: '', component: MainDashboardComponent },
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
       { path: 'dashboard', component: MainDashboardComponent },
       { path: 'add-event', component: AddEventComponent },
+      { path: 'contact-list', component: ContactListComponent },
     ]
-  }
+  },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

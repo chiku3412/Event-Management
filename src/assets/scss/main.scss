@@ -1,19 +1,22 @@
 @import 'color.scss';
 
-// form css
-mat-form-field {
-    width: 100%;
-    .mat-mdc-text-field-wrapper {
-        border-radius: unset;
-    }
-    .mat-mdc-form-field-subscript-wrapper {
-        display: none;
-    }
-    .mat-mdc-form-field-infix {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        min-height: 45px;
-        line-height: 45px;
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+// input css
+input {
+    transition: all 0.5s;
+    &:focus, &:hover  {
+        box-shadow: unset;
+        border-color: $ck-main-color;
+        transition: all 0.5s;
     }
 }
 
@@ -85,3 +88,31 @@ mat-form-field {
         color: #2d373c;
     }
 }
+
+// header css
+
+.admin-header-section {
+    padding: 0.5rem;
+    background: #f9fafb;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    .card {
+        border: unset;
+        background-color: unset;
+    }
+    .p-menubar {
+        justify-content: space-between;
+        border: unset;
+        background: unset;
+        padding: unset;
+        .p-menubar-start, p-menubarsub {
+            width: 100%;
+            ul {
+                justify-content: end
+            };
+        }
+        
+    }
+}
+

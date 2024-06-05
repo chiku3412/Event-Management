@@ -1,0 +1,14 @@
+@import '../../../../assets/scss/color.scss';
+
+.footer-section {
+    background-color: $ck-black;
+    padding: 15px;
+    h6 {
+        text-align: center;
+        margin: 0;
+        color: $ck-white;
+        letter-spacing: 1px;
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+}

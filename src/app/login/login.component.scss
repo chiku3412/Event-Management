@@ -1,0 +1,37 @@
+@import '../../assets/scss/color.scss';
+
+.login-form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/images/slider-01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .form-wrapper {
+        background: rgba(255,255,255,0.8);
+        padding: 50px;
+        border-radius: 8px;
+        color: $ck-black;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 0 10px $gainsboro;
+        .logo {
+            h2 {
+                font-size: 22px;
+                font-family: "Chivo", sans-serif !important;
+                span {
+                    font-weight: 900;
+                }
+                font-weight: 600;
+            }
+        }
+        a {
+            color: $ck-main-color;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
